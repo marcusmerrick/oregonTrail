@@ -32,7 +32,7 @@ class Wagon {
            if (currentPassenger.isHealthy = false) {
                return false
            } else {
-               return true
+               return false
            }
         }
 

@@ -30,9 +30,9 @@ class Wagon {
         for (let i = 0; i < this.passengers.length; i = i + 1) {
             let currentPassenger = this.passengers[i]
            if (currentPassenger.isHealthy = false) {
-               return false
+               return 
            } else {
-               return true
+               return false
            }
         }
 
