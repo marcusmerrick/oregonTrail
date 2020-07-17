@@ -26,38 +26,40 @@ class Wagon {
 
     shouldQuarantine() {
         
-        let total = 0
-        for (let i = 0; i < this.passengers.length; i = i + 1) {
-            let currentPassenger = this.passengers[i]
-           if (currentPassenger.isHealthy = false) {
-               return false
-           } else {
-               return true
-           }
-        }
-
+        // let total = 0
+        // for (let i = 0; i < this.passengers.length; i = i + 1) {
+        //     let currentPassenger = this.passengers[i]
+        //    if (currentPassenger.isHealthy = false) {
+        //        return false
+        //    } else {
+        //        return true
+        //    }
+        // }
+        
+        const health = this.passengers.some(currentPassenger => currentPassenger.isHealthy === false)
+        return health
 
         // Returns true if there is at least one unhealthy person in the wagon. Return false if not.
     }
 
     totalFood() {
 
-        let total = 0
-        for (let i = 0; i < this.passengers.length; i = i + 1) {
-            let currentPassenger = this.passengers[i]
-            total = total + currentPassenger.food
-        }
+        // let total = 0
+        // for (let i = 0; i < this.passengers.length; i = i + 1) {
+        //     let currentPassenger = this.passengers[i]
+        //     total = total + currentPassenger.food
+        // }
 
         // function getSum (total, currentNumber){
-        //     return total + currentNumber
-        // }
-        // let curPass = this.passengers[i]
+        //      return total + currentNumber
+        //  }
+        // let curPass = this.passengers
         // let sum = curPass.reduce(getSum, 0)
 
-      //  total = this.passengers.reduce((this.passengers.food, 0) => this.passengers.food + 0);
+     let total = this.passengers.reduce((totalFood, currPassenger) => totalFood + currPassenger.food, 0);
      
-        // let total = this.passengers.reduce((a, b) => a + b)
-      return total
+        // let total = this.passengers.reduce((a, b) => a + b, 0)
+     return total
         // Returns the total amount of food among all passengers in the wagon.
     }
 
